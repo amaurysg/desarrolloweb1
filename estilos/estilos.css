@@ -1,0 +1,194 @@
+/* header {
+  background-color: pink;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+.header {
+  background-color: #1b2127;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Tomo 86px pues es la medida del height de la imagen logo */
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.header ol li {
+  /* .header ol li hereda de .header ol */
+  height: inherit;
+}
+
+.menu {
+  /* .menu hereda de .header */
+  height: inherit;
+}
+
+h1 {
+  font-size: 40px;
+  /* font-family: "Fjalla One", sans-serif; */
+  /* font-weight: 300; */
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  color: white;
+  margin: 0px;
+
+  /* text-transform: none; */
+  /* text-decoration: underline; */
+}
+h1 strong {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.hero {
+  height: 300px;
+  background-image: url(../images/hero.jpg);
+  background-color: #1b2127;
+  background-size: 220px 300px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid gray;
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  padding: 20px;
+  /* margin: 10px; */
+  margin-bottom: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.project-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+/* .project-date {
+  margin: 10px 0;
+} */
+
+.project-description {
+  font-size: 20px;
+}
+.project-details {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.project-imageContainer {
+  width: 500px;
+}
+
+.project strong {
+  font-family: "Fjalla One", sans-serif;
+}
+/* PADRE EVENT-LIST */
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event {
+  /* border: 1px solid red; */
+  border-radius: 15px;
+  overflow: hidden; /* Propiedad que me oculta sobrantes esquinas de bordes */
+  margin: 10px;
+  width: 500px;
+  background-color: #f4fbff;
+  /*  flex-shrink: 0; */ /* Para que mi elemento no pierda las dimensiones, el valor va de 0 a 1  */
+}
+.event-detail {
+  margin: 20px 40px;
+  background-color: white;
+  margin-top: -40px;
+  position: relative;
+  padding: 15px;
+  text-align: center;
+}
+.event img {
+  width: 500px;
+  height: 200px;
+  object-fit: cover; /* Propiedad que me me ubica mejor la imagen cuando le ponemos dimensiones */
+}
+
+.event-url {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px 25px;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.footer {
+  background-color: #1b2127;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+  text-decoration: overline;
+}
