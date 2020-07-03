@@ -9,10 +9,13 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  width: 1000px;
+  font-family: "MuseoModerno", cursive;
+  /* background: #1b2127; */
 }
 .header {
-  background-color: #1b2127;
+  background-color: #f4f6f9;
   color: white;
   text-decoration: none;
   display: flex;
@@ -22,12 +25,16 @@ body {
 }
 
 .header a {
-  color: white;
+  color: black;
   text-decoration: none;
   height: inherit;
   display: flex;
   align-items: center;
   padding: 0 10px;
+  font-family: "MuseoModerno", cursive;
+}
+a:hover {
+  border-top: 2px solid black;
 }
 
 .header ol {
@@ -47,42 +54,48 @@ body {
 
 h1 {
   font-size: 40px;
-  /* font-family: "Fjalla One", sans-serif; */
+  font-family: "MuseoModerno", cursive;
   /* font-weight: 300; */
   line-height: 1.5;
   letter-spacing: -0.2px;
   color: white;
   margin: 0px;
+  padding-left: 20px;
 
   /* text-transform: none; */
   /* text-decoration: underline; */
 }
 h1 strong {
-  color: #026fff;
+  color: #f4f6f9;
 }
 
 h2 {
-  color: #026fff;
+  color: black;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
   margin-bottom: 40px;
+  font-family: "MuseoModerno", cursive;
+  text-align: center;
 }
 
 .hero {
   height: 300px;
-  background-image: url(../images/hero.jpg);
+  background-image: url(../images/dedo.jpg);
   background-color: #1b2127;
-  background-size: 220px 300px;
+  /* background-size: 220px 300px;
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: right; */
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.hero-image {
 }
 
 .portfolio {
   background-color: #fafafa;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .project {
@@ -124,6 +137,10 @@ h2 {
   width: 500px;
 }
 
+.project-image {
+  display: block;
+  margin: auto;
+}
 .project strong {
   font-family: "Fjalla One", sans-serif;
 }
@@ -131,17 +148,21 @@ h2 {
 .event-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .event {
-  /* border: 1px solid red; */
+  border: -0.5px solid black;
+  -webkit-box-shadow: 1px -1px 12px -2px rgba(0, 0, 0, 0.68);
+  box-shadow: 1px -1px 12px -2px rgba(0, 0, 0, 0.68);
   border-radius: 15px;
   overflow: hidden; /* Propiedad que me oculta sobrantes esquinas de bordes */
   margin: 10px;
-  width: 500px;
+  width: 450px;
   background-color: #f4fbff;
-  /*  flex-shrink: 0; */ /* Para que mi elemento no pierda las dimensiones, el valor va de 0 a 1  */
+  /*  flex-shrink: 0; */ /* Para que mi elemento NO pierda las dimensiones, el valor va de 0 a 1  */
 }
 .event-detail {
   margin: 20px 40px;
@@ -158,12 +179,21 @@ h2 {
 }
 
 .event-url {
-  border: 1px solid blue;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 5px 25px;
   text-decoration: none;
+  color: black;
+}
+.event-url:hover {
+  text-transform: uppercase;
+  color: black;
 }
 
+.event-url a {
+  color: pink;
+  text-decoration: none;
+}
 ol,
 ul {
   margin: 0;
@@ -175,13 +205,92 @@ figure {
   margin: 0;
 }
 
-.footer {
+.contact {
   background-color: #1b2127;
   color: white;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5px;
+}
+
+.social {
+}
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  margin: 5px;
+}
+
+.social-link.twitter {
+  background-image: url("../images/twitter.svg");
+  background-size: 50px 50px;
+}
+
+.social-link.facebook {
+  background-image: url("../images/facebook.svg");
+  background-size: 50px 50px;
+}
+.social-link.github {
+  background-image: url("../images/github.svg");
+  background-size: 50px 50px;
+}
+.social-link.instagram {
+  background-image: url("../images/instagram.svg");
+  background-size: 50px 50px;
+}
+
+.form-email {
+  font-family: "MuseoModerno", cursive;
+  margin-left: 5px;
+  display: flex;
+}
+
+.form-email input {
+  border-color: gray;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 5px 20px 5px 25px;
+  background-image: url("../images/envelope.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 15px 15px;
+  background-position-x: 5px;
+  font-family: "MuseoModerno", cursive;
+  margin: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.form-email button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  border-style: inset;
+  display: block;
+  /*  margin: 5px 0;
+  padding: 10px 0; */
+  margin: 15px auto;
+
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  font-family: "MuseoModerno", cursive;
+}
+.form-email h3 {
+  font-family: "MuseoModerno", cursive;
+}
+
+.footer {
+  background-color: #f5f6f9;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  font-family: "MuseoModerno", cursive;
 }
 
 .footer img {
@@ -189,6 +298,16 @@ figure {
 }
 
 .footer a {
-  color: white;
+  color: black;
   text-decoration: overline;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  align-items: inherit;
+  height: inherit;
+  justify-content: inherit;
+  flex-wrap: inherit;
 }
