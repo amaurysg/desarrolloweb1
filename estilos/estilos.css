@@ -1,199 +1,157 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores */
+
+/* seletor de etiqueta  header - section - article - nav */
 /* header {
-  background-color: pink;
+  background: pink;
+  color: red
 } */
 
-/* * {
-  margin: 0;
-  padding: 0;
-} */
+/* selector descendente  */
+/* body header div nav ol li a  */
+
+/* selector de clase . */
+
+/* .link */
+
+/* selector de id # */
+/* #portafolio */
+
+/* gris oscuro = #1d252c */
+/* gris claro = #626262 */
+/* background gris = #1b2127 */
+/* celeste = #026fff */
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  margin: 0 auto;
-  width: 1000px;
-  font-family: "MuseoModerno", cursive;
-  /* background: #1b2127; */
-}
-.header {
-  background-color: #f4f6f9;
-  color: white;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px; /* Tomo 86px pues es la medida del height de la imagen logo */
+  margin: 0;
 }
 
-.header a {
-  color: black;
-  text-decoration: none;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  font-family: "MuseoModerno", cursive;
-}
-a:hover {
-  border-top: 2px solid black;
-}
-
-.header ol {
-  display: flex;
-  height: inherit;
-}
-
-.header ol li {
-  /* .header ol li hereda de .header ol */
-  height: inherit;
-}
-
-.menu {
-  /* .menu hereda de .header */
-  height: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: normal;
+  /* font-style: italic; */
 }
 
 h1 {
   font-size: 40px;
-  font-family: "MuseoModerno", cursive;
-  /* font-weight: 300; */
   line-height: 1.5;
   letter-spacing: -0.2px;
   color: white;
-  margin: 0px;
-  padding-left: 20px;
-
-  /* text-transform: none; */
-  /* text-decoration: underline; */
+  margin: 0;
+  /* margin: 100px 150px 70px 30px; */
+  /* text-transform: uppercase; */
+  /* text-decoration: dashed; */
 }
 h1 strong {
-  color: #f4f6f9;
+  color: #026fff;
 }
-
 h2 {
-  color: black;
+  color: #026fff;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
+  font-size: 24px;
   margin-bottom: 40px;
-  font-family: "MuseoModerno", cursive;
-  text-align: center;
 }
 
 .hero {
   height: 300px;
-  background-image: url(../images/dedo.jpg);
+  /* background-image: url('../images/hero.jpg'); */
   background-color: #1b2127;
-  /* background-size: 220px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right; */
+  /* background-size: 500px 300px; */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 .hero-image {
+  object-fit: cover;
 }
 
 .portfolio {
-  background-color: #fafafa;
-  /* padding: 20px; */
+  background: #fafafa;
+  padding: 20px;
+  /* background: red; */
 }
 
 .project {
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+  /* color: blue; */
+  /* border-top-color: red;
+  border-top-width: 15px;
+  border-top-style: solid; */
   border: 1px solid gray;
   border-radius: 10px;
-  border-top-left-radius: 50px;
-  padding: 20px;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
   /* margin: 10px; */
   margin-bottom: 15px;
+  /* margin-right
+  margin-left 
+  margin-top */
+  padding: 20px;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+.project-description {
+  font-size: 20px;
+}
+.project strong {
+  font-family: "Fjalla One", sans-serif;
+}
+/* .project-date {
+  margin: 10px 0;
+} */
+
 .project-title {
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.project-course,
-.project-date,
-.project-url {
-  margin: 10px 0;
-}
-/* .project-date {
-  margin: 10px 0;
-} */
-
-.project-description {
-  font-size: 20px;
-}
 .project-details {
   width: 500px;
-  margin: 0 auto;
 }
 
 .project-imageContainer {
   width: 500px;
 }
 
-.project-image {
-  display: block;
-  margin: auto;
-}
-.project strong {
-  font-family: "Fjalla One", sans-serif;
-}
-/* PADRE EVENT-LIST */
-.event-list {
+.header {
+  background-color: #1b2127;
+  color: white;
   display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  border: 1px solid;
-  border-radius: 10px;
-  margin-bottom: 5px;
 }
 
-.event {
-  border: -0.5px solid black;
-  -webkit-box-shadow: 1px -1px 12px -2px rgba(0, 0, 0, 0.68);
-  box-shadow: 1px -1px 12px -2px rgba(0, 0, 0, 0.68);
-  border-radius: 15px;
-  overflow: hidden; /* Propiedad que me oculta sobrantes esquinas de bordes */
-  margin: 10px;
-  width: 450px;
-  background-color: #f4fbff;
-  /*  flex-shrink: 0; */ /* Para que mi elemento NO pierda las dimensiones, el valor va de 0 a 1  */
-}
-.event-detail {
-  margin: 20px 40px;
-  background-color: white;
-  margin-top: -40px;
-  position: relative;
-  padding: 15px;
-  text-align: center;
-}
-.event img {
-  width: 500px;
-  height: 200px;
-  object-fit: cover; /* Propiedad que me me ubica mejor la imagen cuando le ponemos dimensiones */
-}
-
-.event-url {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px 25px;
-  text-decoration: none;
-  color: black;
-}
-.event-url:hover {
-  text-transform: uppercase;
-  color: black;
-}
-
-.event-url a {
-  color: pink;
-  text-decoration: none;
-}
 ol,
 ul {
   margin: 0;
@@ -205,92 +163,50 @@ figure {
   margin: 0;
 }
 
-.contact {
-  background-color: #1b2127;
+.header a {
   color: white;
-  height: 150px;
+  text-decoration: none;
+}
+.menu {
+  height: inherit;
+}
+.header ol {
+  display: flex;
+  height: inherit;
+}
+.header ol li {
+  height: inherit;
+}
+.header a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: inherit;
+  padding: 0 10px;
 }
 
-.social {
+.flexbox {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
 }
-.social-link {
-  display: inline-block;
+
+.box {
   width: 50px;
   height: 50px;
-
   margin: 5px;
-}
+  border: 1px solid red;
 
-.social-link.twitter {
-  background-image: url("../images/twitter.svg");
-  background-size: 50px 50px;
-}
-
-.social-link.facebook {
-  background-image: url("../images/facebook.svg");
-  background-size: 50px 50px;
-}
-.social-link.github {
-  background-image: url("../images/github.svg");
-  background-size: 50px 50px;
-}
-.social-link.instagram {
-  background-image: url("../images/instagram.svg");
-  background-size: 50px 50px;
-}
-
-.form-email {
-  font-family: "MuseoModerno", cursive;
-  margin-left: 5px;
-  display: flex;
-}
-
-.form-email input {
-  border-color: gray;
-  border-radius: 5px;
-  border-style: solid;
-  padding: 5px 20px 5px 25px;
-  background-image: url("../images/envelope.svg");
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-size: 15px 15px;
-  background-position-x: 5px;
-  font-family: "MuseoModerno", cursive;
-  margin: auto;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.form-email button {
-  background-color: transparent;
-  color: white;
-  border: 1px solid gray;
-  border-style: inset;
-  display: block;
-  /*  margin: 5px 0;
-  padding: 10px 0; */
-  margin: 15px auto;
-
-  padding: 5px;
-  border-radius: 5px;
-  width: 100px;
-  font-family: "MuseoModerno", cursive;
-}
-.form-email h3 {
-  font-family: "MuseoModerno", cursive;
+  flex-shrink: 0;
 }
 
 .footer {
-  background-color: #f5f6f9;
-  color: black;
+  color: white;
+  background-color: #1b2127;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0px;
-  font-family: "MuseoModerno", cursive;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -298,16 +214,154 @@ figure {
 }
 
 .footer a {
-  color: black;
-  text-decoration: overline;
+  color: white;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-list-title {
+  margin-left: 20px;
+}
+.event {
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.social {
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url("../images/twitter.svg");
+}
+.social-link.facebook {
+  background-image: url("../images/facebook.svg");
+}
+.social-link.github {
+  background-image: url("../images/github.svg");
+}
+.social-link.instagram {
+  background-image: url("../images/instagram.svg");
+}
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url("../images/envelope.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button {
+  display: block;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.form-email h3 {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .wrapper {
-  width: 1000px;
+  /* border: 1px solid red; */
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
   margin: 0 auto;
   display: inherit;
+  justify-content: inherit;
   align-items: inherit;
   height: inherit;
-  justify-content: inherit;
   flex-wrap: inherit;
+}
+
+/* desktop first que empieces desde el MQ más grande */
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: block;
+    height: auto;
+  }
+  .header ol {
+    display: initial;
+    justify-content: center;
+  }
+  .header ol li {
+    height: 25px;
+  }
+  .header a {
+    justify-content: center;
+    cursor: pointer;
+  }
+  a:hover {
+    border: 1px solid gainsboro;
+    cursor: pointer;
+  }
+  .header .logo {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
 }
