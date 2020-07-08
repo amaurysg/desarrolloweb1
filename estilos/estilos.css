@@ -38,7 +38,11 @@ h5,
 h6 {
   font-family: "Fjalla One", sans-serif;
   font-weight: normal;
+
   /* font-style: italic; */
+}
+h2 {
+  text-align: center;
 }
 
 h1 {
@@ -135,13 +139,19 @@ h2 {
 }
 
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
 }
 
+.project-imageContainer img {
+  max-width: 100%;
+}
+/* .project-image {
+  width: 100%;
+} */
 .header {
   background-color: #1b2127;
   color: white;
@@ -201,8 +211,8 @@ figure {
 }
 
 .footer {
-  color: white;
-  background-color: #1b2127;
+  color: black;
+  background-color: #f4f6f9;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,7 +224,7 @@ figure {
 }
 
 .footer a {
-  color: white;
+  color: black;
 }
 
 .event-list {
@@ -225,8 +235,8 @@ figure {
   margin-left: 20px;
 }
 .event {
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -258,7 +268,7 @@ figure {
 }
 
 .contact {
-  background-color: #056fff;
+  background-color: #1b2127;
   color: white;
   height: 150px;
   display: flex;
@@ -311,6 +321,7 @@ figure {
   border-radius: 5px;
   width: 100px;
   margin-top: 10px;
+  margin: 1em auto;
 }
 
 .form-email h3 {
@@ -320,6 +331,7 @@ figure {
 .wrapper {
   /* border: 1px solid red; */
   max-width: 1000px;
+
   /* width: 100%; */
   flex: 1;
   margin: 0 auto;
@@ -333,6 +345,12 @@ figure {
 /* desktop first que empieces desde el MQ más grande */
 
 @media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+  .form-email {
+    margin-top: -10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -358,10 +376,80 @@ figure {
   .header .logo {
     text-align: center;
   }
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
+    font-size: 16px;
+  }
+  .project-title {
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+  }
+  .project-course {
+    font-size: 1em;
+  }
+  .project-date {
+    font-size: 1em;
+  }
+  .project-url {
+    font-size: 1em;
+  }
+  .project-description {
+    font-size: 1em;
+  }
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+  .event img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .project-details {
+    font-size: 12px;
+  }
+  .event-detail {
+    margin: -2em, 0.5em 0.5em;
+    padding: 1em;
+  }
+  .project-course,
+  .project-date,
+  .project-url {
+    margin: 0.3em 0;
+  }
+  .contact {
+    height: auto;
+    padding: 16px 0;
+    padding-left: 10px;
+    display: block;
+    text-align: center;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent; /* Me quito margin de todo el footer */
+  }
 }
 
 @media screen and (max-width: 320px) {
+  /*   .project {
+    display: block;
+  }
+  .project-details {
+    width: 100%;
+  }
+  .project-image {
+    width: 100%;
+  } */
 }
