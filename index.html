@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro:wght@200;400&display=swap"
       rel="stylesheet"
     />
@@ -22,6 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <div class="icon-menu"></div>
     <header class="header">
       <div class="wrapper">
         <figure class="logo">
@@ -117,17 +122,30 @@
         </article>
       </div>
     </section>
+
     <h2>Más sobre mi experiencia</h2>
+
     <section id="experiencia" class="event-list">
       <div class="wrapper">
         <article class="event">
           <figure class="event-imageContainer">
-            <img
+            <div class="flexible-video">
+              <iframe
+                class="youtube-video"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/K3GlI67JHVw"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!--             <img
               class="event-image"
               src="images/soft4.jpg"
               alt="Imagen exp1"
               width="500"
-            />
+            /> -->
           </figure>
           <div class="event-detail">
             <h3 class="event-title">Experiencia 1 2020</h3>
@@ -172,12 +190,19 @@
         </article>
         <article class="event">
           <figure class="event-imageContainer">
-            <img
+            <!-- <img
               class="event-image"
               src="images/soft4.jpg"
               alt="Imagen exp1"
               width="500"
-            />
+            /> -->
+            <video
+              class="html-video"
+              src="/images/video.mp4"
+              width="1428"
+              height="934"
+              controls
+            ></video>
           </figure>
           <div class="event-detail">
             <h3 class="event-title">Experiencia 1 2020</h3>
@@ -231,10 +256,10 @@
           <button class="contact-button">Enviar</button>
         </form>
         <div class="social">
-          <a href="" class="social-link twitter"></a>
-          <a href="" class="social-link facebook"></a>
-          <a href="" class="social-link github"></a>
-          <a href="" class="social-link instagram"></a>
+          <a href="" class="social-link icon-twitter"></a>
+          <a href="" class="social-link icon-facebook2"></a>
+          <a href="" class="social-link icon-github"></a>
+          <a href="" class="social-link icon-instagram"></a>
         </div>
       </div>
     </section>
