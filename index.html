@@ -41,7 +41,7 @@
               <a class="link" href="#experiencia">Experiencia</a>
             </li>
             <li>
-              <a class="link" href="#contacto">Trabajemos juntos</a>
+              <a class="link contacto" href="#contacto">Trabajemos juntos</a>
             </li>
           </ol>
         </nav>
@@ -300,11 +300,20 @@
       </div>
     </footer>
     <script>
-      console.log("Hola Response");
+      const ipad = window.matchMedia("screen and (max-width: 767px)");
       const menu = document.querySelector(".menu");
       const burgerButton = document.querySelector("#burger-menu");
 
-      burgerButton.addEventListener("click", hideShow);
+      ipad.addListener(validation);
+
+      function validation(evento) {
+        if (evento.matches) {
+          burgerButton.addEventListener("click", hideShow);
+        } else burgerButton.removeEventListener("click", hideShow);
+        console.log(evento.matches);
+      }
+      validation(ipad);
+
       function hideShow() {
         if (menu.classList.contains("is-active")) {
           menu.classList.remove("is-active");

@@ -220,6 +220,7 @@ figure {
   color: black;
   text-decoration: none;
 }
+
 .menu {
   height: inherit;
 }
@@ -229,6 +230,12 @@ figure {
 }
 .header ol li {
   height: inherit;
+}
+.header ol li .contacto {
+  height: initial;
+  margin-top: 22px;
+  border: 1px solid;
+  border-radius: 5px;
 }
 .header a {
   display: flex;
@@ -408,7 +415,7 @@ figure {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 2;
 }
 
 .burger-button {
@@ -422,7 +429,7 @@ figure {
   left: 5px;
   top: 5px;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   color: white;
   font-size: 1.5em;
 }
@@ -443,6 +450,7 @@ figure {
     top: 0;
     bottom: 0;
     width: 100%;
+    overflow: hidden;
     /* filter: opacity(80%) blur(1px); */
   }
   h1 {
@@ -472,18 +480,20 @@ figure {
   }
   .header ol li {
     height: 25px;
+    margin-top: 5em;
   }
 
   .header a {
     justify-content: center;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 1em;
     color: white;
     height: 40px;
     text-decoration: underline;
-
+    /* border: 2px solid lightcoral; */
     margin-bottom: 50px;
   }
+
   a:hover {
     border: 1px solid gainsboro;
     cursor: pointer;
@@ -508,6 +518,7 @@ figure {
   .menu.is-active {
     left: 0;
   }
+
   .project {
     display: block;
   }
@@ -554,6 +565,7 @@ figure {
   .event-detail {
     margin: -2em, 0.5em 0.5em;
     padding: 1em;
+    z-index: 2;
   }
   .project-course,
   .project-date,
@@ -573,7 +585,7 @@ figure {
   .footer {
     display: block;
     text-align: center;
-    border: 1px solid transparent; /* Me quito margin de todo el footer */
+    border: 1px solid transparent; /* Me quitó margin de todo el footer */
   }
 }
 
